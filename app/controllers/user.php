@@ -1,7 +1,12 @@
 <?php
 
-class User extends Controller {
-    public function about() {
-        echo 'user/about';
+class user extends Controller
+{
+    public function index()
+    {
+        $data['judul'] = 'Home';
+        $this->view('templates/header' . $data);
+        $this->view('user/user-index');
+        $this->view('templates/footer');
     }
 }
