@@ -1,0 +1,14 @@
+.navbar .dropdown-toggle::after {
+  display: none;
+}
+.icon-circle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #e6e2df; /* Warna lingkaran */
+  color: #065550; /* Warna icon */
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Opsional: bayangan halus */
+}
