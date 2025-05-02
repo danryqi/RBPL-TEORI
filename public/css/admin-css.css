@@ -1,6 +1,16 @@
 .navbar .dropdown-toggle::after {
   display: none;
 }
+
+.navbar {
+    height: 100px;
+    background-color: #065550;
+}
+
+.nav-link {
+    color: #ffffff;
+}
+
 .icon-circle {
   display: inline-flex;
   align-items: center;
@@ -11,4 +21,8 @@
   height: 40px;
   border-radius: 50%;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Opsional: bayangan halus */
+}
+
+body {
+    background-color: #E6E2DF;
 }
