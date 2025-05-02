@@ -3,12 +3,12 @@
 }
 
 .navbar {
-    height: 100px;
-    background-color: #065550;
+  height: 100px;
+  background-color: #065550;
 }
 
 .nav-link {
-    color: #ffffff;
+  color: #ffffff;
 }
 
 .icon-circle {
@@ -24,5 +24,78 @@
 }
 
 body {
-    background-color: #E6E2DF;
+  background-color: #e6e2df;
 }
+
+.main {
+  margin: 30px 103px 30px 103px;
+}
+
+.produk-container {
+  width: 300px;
+  height: 93px;
+  background-color: #ffffff;
+  margin-right: 6px;
+  margin-bottom: 8px;
+  border-radius: 8px;
+}
+
+.stok-rendah {
+  width: 300px;
+  height: 93px;
+  background-color: #ffffff;
+  margin-left: 6px;
+  margin-right: 6px;
+  margin-bottom: 8px;
+  border-radius: 8px;
+}
+
+.penjualan-harian {
+  width: 300px;
+  height: 93px;
+  background-color: #ffffff;
+  margin-left: 6px;
+  margin-right: 6px;
+  margin-bottom: 8px;
+  border-radius: 8px;
+}
+
+.pesanan-baru {
+  width: 300px;
+  height: 93px;
+  background-color: #ffffff;
+  margin-left: 6px;
+  margin-bottom: 8px;
+  border-radius: 8px;
+}
+
+.tren-penjualan, .stok-produk {
+  width: 610px;
+  height: 336px;
+  background-color: #ffffff;
+  margin-top: 8px;
+  margin-right: 10px;
+  margin-bottom: 8px;
+  border-radius: 8px;
+}
+
+.kategori-terjual, .produk-terlaris {
+  width: 610px;
+  height: 336px;
+  background-color: #ffffff;
+  margin-top: 8px;
+  margin-left: 10px;
+  margin-bottom: 8px;
+  border-radius: 8px;
+}
+
+.pembelian-terbaru {
+    width: 1239px;
+    height: 276px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    margin-top: 8px;
+    margin-bottom: 20px;
+}
+
+
