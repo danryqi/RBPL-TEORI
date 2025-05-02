@@ -1,0 +1,62 @@
+.navbar .dropdown-toggle::after {
+  display: none;
+}
+
+.navbar {
+  height: 100px;
+  background-color: #065550;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+.navbar-nav {
+  font-family: "Inter-SemiBold", Helvetica;
+  font-weight: 600;
+}
+
+.nav-link {
+  color: #ffffff;
+}
+
+.icon-circle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #e6e2df; /* Warna lingkaran */
+  color: #065550; /* Warna icon */
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Opsional: bayangan halus */
+}
+
+body {
+  background-color: #e6e2df;
+}
+
+.main {
+  margin: 30px 103px 30px 103px;
+}
+
+.container {
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+}
+
+footer {
+  height: 180px;
+  background-color: #065550;
+  align-content: center;
+  justify-items: center;
+}
+
+footer p {
+  color: #ffffff;
+  font-family: "Inter-SemiBold", Helvetica;
+  font-weight: bold;
+  margin-bottom: 0;
+}
+
+.footer-section {
+  justify-items: center;
+}

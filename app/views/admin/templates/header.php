@@ -32,13 +32,13 @@
                             <a class="nav-link nav-aktif" href="<?= baseurl; ?>">Beranda</a>
                         </li>
                         <li class="nav-item mx-4">
-                            <a class="nav-link" href="dataupdate.html">Stok</a>
+                            <a class="nav-link" href="<?= baseurl; ?>/admin/stok">Stok</a>
                         </li>
                         <li class="nav-item mx-4">
                             <a class="nav-link" href="<?= baseurl; ?>/admin/produk">Produk</a>
                         </li>
                         <li class="nav-item mx-4">
-                            <a class="nav-link" href="laporan.php">Laporan</a>
+                            <a class="nav-link" href="<?= baseurl; ?>/admin/laporan">Laporan</a>
                         </li>
                         <li class="nav-item dropdown mx-4" id="login">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"

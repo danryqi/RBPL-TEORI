@@ -19,4 +19,31 @@ class admin extends Controller
         $this->view('admin/admin-produk');
         $this->view('admin/templates/footer');
     }
+
+    public function detail_produk()
+    {
+        $data['judul'] = 'Detail Produk';
+        $data['css'] = 'admin-detailproduk.css';
+        $this->view('admin/templates/header', $data);
+        $this->view('admin/admin-detailproduk');
+        $this->view('admin/templates/footer');
+    }
+
+    public function stok()
+    {
+        $data['judul'] = 'Stok Bahan Baku';
+        $data['css'] = 'admin-stok.css';
+        $this->view('admin/templates/header', $data);
+        $this->view('admin/admin-stok');
+        $this->view('admin/templates/footer');
+    }
+
+    public function laporan()
+    {
+        $data['judul'] = 'Laporan Penjualan';
+        $data['css'] = 'admin-laporan.css';
+        $this->view('admin/templates/header', $data);
+        $this->view('admin/admin-laporan');
+        $this->view('admin/templates/footer');
+    }
 }

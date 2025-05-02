@@ -1,3 +1,3 @@
 <?php
 
-define('baseurl', 'http://localhost/RBPL/RBPL-TEORI/public');
+define('baseurl', 'http://localhost:3000/RBPL/RBPL-TEORI/public');

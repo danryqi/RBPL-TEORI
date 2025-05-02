@@ -34,77 +34,79 @@ body {
   background-color: #e6e2df;
 }
 
-.main {
+.main-content {
   margin: 30px 103px 30px 103px;
 }
 
-.produk-container {
-  width: 300px;
-  height: 93px;
+.cont-title h2 {
+  color: #065550;
+  font-family: "Inter-SemiBold", Helvetica;
+  font-weight: 600;
+}
+
+.cont-head {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.cont-head button {
+  border-radius: 4px;
+  color: #ffffff;
+  background-color: #065550;
+}
+
+.total-produk {
+  width: 280px;
+  height: 100px;
   background-color: #ffffff;
-  margin-right: 6px;
-  margin-bottom: 8px;
   border-radius: 8px;
+  margin-right: 8px;
+  margin-top: 17.5px;
+  margin-bottom: 16px;
 }
 
 .stok-rendah {
-  width: 300px;
-  height: 93px;
+  width: 280px;
+  height: 100px;
   background-color: #ffffff;
-  margin-left: 6px;
-  margin-right: 6px;
-  margin-bottom: 8px;
   border-radius: 8px;
+  margin-left: 8px;
+  margin-right: 8px;
+  margin-top: 17.5px;
+  margin-bottom: 16px;
 }
 
-.penjualan-harian {
-  width: 300px;
-  height: 93px;
+.perlu-stok {
+  width: 280px;
+  height: 100px;
   background-color: #ffffff;
-  margin-left: 6px;
-  margin-right: 6px;
-  margin-bottom: 8px;
   border-radius: 8px;
+  margin-left: 8px;
+  margin-right: 8px;
+  margin-top: 17.5px;
+  margin-bottom: 16px;
 }
 
-.pesanan-baru {
-  width: 300px;
-  height: 93px;
+.update-terakhir {
+  width: 280px;
+  height: 100px;
   background-color: #ffffff;
-  margin-left: 6px;
-  margin-bottom: 8px;
   border-radius: 8px;
+  margin-left: 8px;
+  margin-top: 17px;
+  margin-bottom: 8px;
 }
 
-.tren-penjualan,
-.stok-produk {
-  width: 610px;
-  height: 336px;
-  background-color: #ffffff;
-  margin-top: 8px;
-  margin-right: 10px;
-  margin-bottom: 8px;
-  border-radius: 8px;
+.tabel-head {
+  background-color: #e0f2f1;
 }
 
-.kategori-terjual,
-.produk-terlaris {
-  width: 610px;
-  height: 336px;
-  background-color: #ffffff;
-  margin-top: 8px;
-  margin-left: 10px;
-  margin-bottom: 8px;
+.tabel-stok {
+  width: 100%;
+  padding: 0px 10px 0px 10px;
   border-radius: 8px;
-}
-
-.pembelian-terbaru {
-  width: 1239px;
-  height: 276px;
   background-color: #ffffff;
-  border-radius: 8px;
-  margin-top: 8px;
-  margin-bottom: 20px;
 }
 
 footer {
