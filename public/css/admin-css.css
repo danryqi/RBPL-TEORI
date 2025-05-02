@@ -7,6 +7,13 @@
   background-color: #065550;
 }
 
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+.navbar-nav {
+  font-family: "Inter-SemiBold", Helvetica;
+  font-weight: 600;
+}
+
 .nav-link {
   color: #ffffff;
 }
@@ -69,7 +76,8 @@ body {
   border-radius: 8px;
 }
 
-.tren-penjualan, .stok-produk {
+.tren-penjualan,
+.stok-produk {
   width: 610px;
   height: 336px;
   background-color: #ffffff;
@@ -79,7 +87,8 @@ body {
   border-radius: 8px;
 }
 
-.kategori-terjual, .produk-terlaris {
+.kategori-terjual,
+.produk-terlaris {
   width: 610px;
   height: 336px;
   background-color: #ffffff;
@@ -90,12 +99,24 @@ body {
 }
 
 .pembelian-terbaru {
-    width: 1239px;
-    height: 276px;
-    background-color: #ffffff;
-    border-radius: 8px;
-    margin-top: 8px;
-    margin-bottom: 20px;
+  width: 1239px;
+  height: 276px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  margin-top: 8px;
+  margin-bottom: 20px;
 }
 
+footer {
+  height: 200px;
+  background-color: #065550;
+  align-content: center;
+  justify-items: center;
+}
 
+footer p {
+  color: #ffffff;
+  font-family: "Inter-SemiBold", Helvetica;
+  font-weight: bold;
+  margin-bottom: 0;
+}

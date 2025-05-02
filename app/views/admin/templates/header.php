@@ -28,7 +28,7 @@
 
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <ul class="navbar-nav ms-auto align-items-center">
-                        <li class="nav-item mx-auto">
+                        <li class="nav-item mx-4">
                             <a class="nav-link nav-aktif" href="<?= baseurl; ?>">Beranda</a>
                         </li>
                         <li class="nav-item mx-4">
