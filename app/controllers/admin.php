@@ -4,7 +4,7 @@ class admin extends Controller
 {
     public function index()
     {
-        $data['judul'] = 'Dashboard';
+        $data['judul'] = 'Dashboard Admin';
         $data['css'] = 'admin-css.css';
         $this->view('admin/templates/header', $data);
         $this->view('admin/admin-index');
@@ -13,7 +13,7 @@ class admin extends Controller
 
     public function produk()
     {
-        $data['judul'] = 'Produk';
+        $data['judul'] = 'Daftar Produk';
         $data['css'] = 'admin-produk.css';
         $this->view('admin/templates/header', $data);
         $this->view('admin/admin-produk');

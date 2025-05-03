@@ -13,7 +13,7 @@ class user extends Controller
 
     public function menu()
     {
-        $data['judul'] = 'Home';
+        $data['judul'] = 'Daftar Menu';
         $data['css'] = 'user-menu.css';
         $this->view('user/templates/header' . $data);
         $this->view('user/user-menu');
