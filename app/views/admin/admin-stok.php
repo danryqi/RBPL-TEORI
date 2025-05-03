@@ -1,9 +1,7 @@
 <main>
     <div class="main-content">
         <div class="cont-head">
-            <div class="cont-title">
-                <h2>Stok Bahan Baku</h2>
-            </div>
+            <div class="cont-title">Stok Bahan Baku</div>
             <div class="cont">
                 <button>Tambah Stok</button>
             </div>
