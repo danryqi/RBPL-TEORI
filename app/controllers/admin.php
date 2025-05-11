@@ -13,7 +13,7 @@ class admin extends Controller
 
     public function produk()
     {
-        $data['judul'] = 'Daftar Produk';
+        $data['judul'] = 'Daftar   Produk';
         $data['css'] = 'admin-produk.css';
         $this->view('admin/templates/header', $data);
         $this->view('admin/admin-produk');

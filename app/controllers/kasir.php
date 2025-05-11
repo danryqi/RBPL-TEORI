@@ -5,7 +5,7 @@ class kasir extends Controller
     public function index()
     {
         $data['judul'] = 'Dashboard Kasir';
-        $data['css'] = 'kasir-css.css';
+        $data['css'] = 'kasir-index.css';
         $this->view('kasir/templates/header', $data);
         $this->view('kasir/kasir-index');
         $this->view('kasir/templates/footer');

@@ -1,0 +1,106 @@
+.navbar .dropdown-toggle::after {
+  display: none;
+}
+
+.navbar {
+  height: 100px;
+  background-color: #065550;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+.navbar-nav {
+  font-family: "Inter-SemiBold", Helvetica;
+  font-weight: 600;
+}
+
+.nav-link {
+  color: #ffffff;
+}
+
+.icon-circle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #e6e2df; /* Warna lingkaran */
+  color: #065550; /* Warna icon */
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Opsional: bayangan halus */
+}
+
+body {
+  background-color: #e6e2df;
+}
+
+main {
+  font-family: "Inter-SemiBold", Helvetica;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.produk {
+  margin-top: 20px;
+  margin-left: 30px;
+}
+
+.title {
+  font-weight: 600;
+  margin-bottom: 14px;
+  font-weight: bolder;
+  color: #065550;
+}
+
+.nav {
+  margin-top: 14px;
+  margin-bottom: 10px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.nav button {
+  border-radius: 20px;
+  margin-right: 5px;
+  margin-left: 5px;
+  padding: 8px 16px 8px 16px;
+}
+
+.menu {
+  margin-top: 10px;
+  margin-right: 18px;
+}
+
+.menu-card {
+  width: 182px;
+  height: 210px;
+  background-color: #ffffff;
+  border-radius: 8px;
+}
+
+.kasir {
+  background-color: #ffffff;
+  width: 450px;
+  height: 924px;
+}
+
+footer {
+  height: 180px;
+  background-color: #065550;
+  align-content: center;
+  justify-items: center;
+}
+
+footer p {
+  color: #ffffff;
+  font-family: "Inter-SemiBold", Helvetica;
+  font-weight: bold;
+  margin-bottom: 0;
+}
+
+.footer-section {
+  justify-items: center;
+}
