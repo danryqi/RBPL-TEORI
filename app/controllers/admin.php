@@ -6,8 +6,9 @@ class admin extends Controller
     {
         $data['judul'] = 'Dashboard Admin';
         $data['css'] = 'admin-css.css';
+        $data['penjualan'] = $this->model('admin_model')->getAllPenjualan();
         $this->view('admin/templates/header', $data);
-        $this->view('admin/admin-index');
+        $this->view('admin/admin-index', $data);
         $this->view('admin/templates/footer');
     }
 

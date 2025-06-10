@@ -99,6 +99,8 @@ body {
 }
 
 .pembelian-terbaru {
+  font-family: "Inter-SemiBold", Helvetica;
+  font-weight: bold;
   width: 1239px;
   height: 276px;
   background-color: #ffffff;
