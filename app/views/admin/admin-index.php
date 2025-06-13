@@ -34,28 +34,28 @@
       <td colspan="4">
         <div class="pembelian-terbaru">
           <h1>Pembelian Terbaru</h1>
-          <table class="table">
-            <thead>
-              <tr>
-                <th scope="col">id</th>
-                <th scope="col">Tanggal</th>
-                <th scope="col">Produk</th>
-                <th scope="col">Total</th>
-              </tr>
-            </thead>
-            <tbody>
-              <?php if ($data['penjualan'] != null) { ?>
-              <?php foreach( $data['penjualan'] as $penjualan ) : ?>
-              <tr>
-                <td><?= $penjualan['id_detail_pesanan']; ?></td>
-                <td><?= $penjualan['waktu']; ?></td>
-                <td><?= $penjualan['nama_menu']; ?></td>
-                <td><?= $penjualan['subtotal']; ?></td>
-              </tr>
-              <?php endforeach; 
-            }else {
-              echo 'Belum ada Produk terjual';
-            }?>
+          <?php if ($data['penjualan'] != null) { ?>
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">id</th>
+                  <th scope="col">Tanggal</th>
+                  <th scope="col">Produk</th>
+                  <th scope="col">Total</th>
+                </tr>
+              </thead>
+              <tbody>
+                <?php foreach ($data['penjualan'] as $penjualan): ?>
+                  <tr>
+                    <td><?= $penjualan['id_detail_pesanan']; ?></td>
+                    <td><?= $penjualan['waktu']; ?></td>
+                    <td><?= $penjualan['nama_menu']; ?></td>
+                    <td><?= $penjualan['subtotal']; ?></td>
+                  </tr>
+                <?php endforeach;
+          } else {
+            echo 'Belum ada Produk terjual';
+          } ?>
             </tbody>
           </table>
         </div>
