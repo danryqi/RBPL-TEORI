@@ -62,8 +62,39 @@ body {
   height: 86px;
   border-radius: 8px;
   background-color: #ffffff;
+  align-content: center;
+}
+
+.sorting h1 {
+  color: #757575;
+  font-family: "Inter-SemiBold", Helvetica;
+  font-size: 13.13px;
+}
+
+.form-sorting {
   margin-top: 12px;
   margin-bottom: 10px;
+  display: flex;
+  flex-direction: row;
+}
+
+.tanggal-mulai {
+  width: 230px;
+  margin-left: 20px;
+  margin-right: 20px;
+  align-content: center;
+}
+
+.tanggal-akhir {
+  width: 230px;
+  margin-right: 20px;
+  align-content: center;
+}
+
+.pilihan-kategori {
+  width: 230px;
+  margin-right: 20px;
+  align-content: center;
 }
 
 .transaction-rate {
@@ -72,6 +103,55 @@ body {
   background-color: #ffffff;
   margin-top: 10px;
   margin-bottom: 10px;
+  padding-right: 80px;
+  padding-left: 80px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.current-month {
+  align-content: center;
+  justify-items: center;
+}
+
+.current-month h1 {
+  color: #757575;
+  font-family: "Inter-SemiBold", Helvetica;
+  font-size: 13.13px;
+}
+
+.monthly-transaction {
+  align-content: center;
+  justify-items: center;
+}
+
+.monthly-transaction h1 {
+  color: #757575;
+  font-family: "Inter-SemiBold", Helvetica;
+  font-size: 13.13px;
+}
+
+.product-selling {
+  align-content: center;
+  justify-items: center;
+}
+
+.product-selling h1 {
+  color: #757575;
+  font-family: "Inter-SemiBold", Helvetica;
+  font-size: 13.13px;
+}
+
+.ave-transaction {
+  align-content: center;
+  justify-items: center;
+}
+
+.ave-transaction h1 {
+  color: #757575;
+  font-family: "Inter-SemiBold", Helvetica;
+  font-size: 13.13px;
 }
 
 .penjualan-produk {
@@ -80,6 +160,27 @@ body {
   background-color: #ffffff;
   margin-top: 10px;
   margin-bottom: 10px;
+  padding-top: 16px;
+  padding-right: 25px;
+  padding-left: 25px;
+}
+
+.penjualan-produk h1 {
+  font-family: "Inter-SemiBold", Helvetica;
+  font-weight: bold;
+  font-size: 17.44px;
+  color: #333333;
+}
+
+.penjualan-content {
+  align-content: center;
+  justify-items: center;
+}
+
+.penjualan-content p {
+  font-family: "Inter-SemiBold", Helvetica;
+  font-weight: bold;
+  color: #0a5c5c;
 }
 
 .daily-sell {
@@ -87,6 +188,16 @@ body {
   border-radius: 8px;
   background-color: #ffffff;
   margin-top: 10px;
+  padding-top: 16px;
+  padding-right: 25px;
+  padding-left: 25px;
+}
+
+.daily-sell h1 {
+  font-family: "Inter-SemiBold", Helvetica;
+  font-weight: bold;
+  font-size: 17.44px;
+  color: #333333;
 }
 
 footer {

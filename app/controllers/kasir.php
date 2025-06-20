@@ -6,8 +6,9 @@ class kasir extends Controller
     {
         $data['judul'] = 'Dashboard Kasir';
         $data['css'] = 'kasir-index.css';
+        $data['product'] = $this->model('menu_model')->allproduct();
         $this->view('kasir/templates/header', $data);
-        $this->view('kasir/kasir-index');
+        $this->view('kasir/kasir-index', $data);
         $this->view('kasir/templates/footer');
     }
 

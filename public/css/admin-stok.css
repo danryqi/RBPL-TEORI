@@ -55,27 +55,58 @@ body {
   border-radius: 4px;
   color: #ffffff;
   background-color: #065550;
+  box-shadow: none;
 }
 
 .total-produk {
   width: 280px;
   height: 100px;
   background-color: #ffffff;
+  padding-top: 15px;
+  padding-left: 15px;
   border-radius: 8px;
   margin-right: 8px;
   margin-top: 17.5px;
   margin-bottom: 16px;
 }
 
+.total-produk h1 {
+  font-family: "Inter-SemiBold", Helvetica;
+  font-size: 15.63px;
+  color: #757575;
+  padding-bottom: 11px;
+}
+
+.total-produk p {
+  font-family: "Inter-SemiBold", Helvetica;
+  font-weight: bolder;
+  font-size: 20px;
+}
+
 .stok-rendah {
   width: 280px;
   height: 100px;
   background-color: #ffffff;
+  padding-top: 15px;
+  padding-left: 15px;
   border-radius: 8px;
   margin-left: 8px;
   margin-right: 8px;
   margin-top: 17.5px;
   margin-bottom: 16px;
+}
+
+.stok-rendah h1 {
+  font-family: "Inter-SemiBold", Helvetica;
+  font-size: 15.63px;
+  color: #757575;
+  padding-bottom: 11px;
+}
+
+.stok-rendah p {
+  font-family: "Inter-SemiBold", Helvetica;
+  font-weight: bolder;
+  font-size: 20px;
 }
 
 .perlu-stok {
@@ -93,10 +124,39 @@ body {
   width: 280px;
   height: 100px;
   background-color: #ffffff;
+  padding-top: 15px;
+  padding-left: 15px;
   border-radius: 8px;
   margin-left: 8px;
   margin-top: 17px;
   margin-bottom: 8px;
+}
+
+.update-terakhir h1 {
+  font-family: "Inter-SemiBold", Helvetica;
+  font-size: 15.63px;
+  color: #757575;
+  padding-bottom: 11px;
+}
+
+.update-terakhir p {
+  font-family: "Inter-SemiBold", Helvetica;
+  font-weight: bolder;
+  font-size: 20px;
+}
+
+.content {
+  height: 100vh;
+  margin-top: 11px;
+  align-content: center;
+  justify-items: center;
+}
+
+.content p {
+  font-family: "Inter-SemiBold", Helvetica;
+  font-weight: bold;
+  font-size: 14.13px;
+  color: #065550;
 }
 
 .tabel-head {

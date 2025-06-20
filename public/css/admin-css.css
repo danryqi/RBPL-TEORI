@@ -34,6 +34,19 @@ body {
   background-color: #e6e2df;
 }
 
+h1 {
+  font-family: "Inter-SemiBold", Helvetica;
+  font-weight: bold;
+  font-size: 17.44px;
+  color: #333333;
+}
+
+p {
+  font-family: "Inter-SemiBold", Helvetica;
+  font-weight: regular;
+  font-size: 14.13px;
+}
+
 .main {
   margin: 30px 103px 30px 103px;
 }
@@ -42,53 +55,131 @@ body {
   width: 300px;
   height: 93px;
   background-color: #ffffff;
+  padding-top: 15px;
+  padding-left: 15px;
   margin-right: 6px;
   margin-bottom: 8px;
   border-radius: 8px;
+}
+
+.produk-container h1 {
+  font-family: "Inter-SemiBold", Helvetica;
+  font-weight: bold;
+  font-size: 15.63px;
+  color: #0a5c5c;
+  padding-bottom: 11px;
+}
+
+.produk-container p {
+  font-family: "Inter-SemiBold", Helvetica;
+  font-weight: bolder;
+  font-size: 20px;
 }
 
 .stok-rendah {
   width: 300px;
   height: 93px;
   background-color: #ffffff;
+  padding-top: 15px;
+  padding-left: 15px;
   margin-left: 6px;
   margin-right: 6px;
   margin-bottom: 8px;
   border-radius: 8px;
+}
+
+.stok-rendah h1 {
+  font-family: "Inter-SemiBold", Helvetica;
+  font-weight: bold;
+  font-size: 15.63px;
+  color: #0a5c5c;
+  padding-bottom: 11px;
+}
+
+.stok-rendah p {
+  font-family: "Inter-SemiBold", Helvetica;
+  font-weight: bolder;
+  font-size: 20px;
 }
 
 .penjualan-harian {
   width: 300px;
   height: 93px;
   background-color: #ffffff;
+  padding-top: 15px;
+  padding-left: 15px;
   margin-left: 6px;
   margin-right: 6px;
   margin-bottom: 8px;
   border-radius: 8px;
 }
 
+.penjualan-harian h1 {
+  font-family: "Inter-SemiBold", Helvetica;
+  font-weight: bold;
+  font-size: 15.63px;
+  color: #0a5c5c;
+  padding-bottom: 11px;
+}
+
+.penjualan-harian p {
+  font-family: "Inter-SemiBold", Helvetica;
+  font-weight: bolder;
+  font-size: 20px;
+}
+
 .pesanan-baru {
   width: 300px;
   height: 93px;
   background-color: #ffffff;
+  padding-top: 15px;
+  padding-left: 15px;
   margin-left: 6px;
   margin-bottom: 8px;
   border-radius: 8px;
 }
 
-.tren-penjualan,
-.stok-produk {
+.pesanan-baru h1 {
+  font-family: "Inter-SemiBold", Helvetica;
+  font-weight: bold;
+  font-size: 15.63px;
+  color: #0a5c5c;
+  padding-bottom: 11px;
+}
+
+.pesanan-baru p {
+  font-family: "Inter-SemiBold", Helvetica;
+  font-weight: bolder;
+  font-size: 20px;
+}
+
+.tren-penjualan {
   width: 610px;
   height: 336px;
   background-color: #ffffff;
+  padding-top: 20px;
+  padding-left: 37px;
   margin-top: 8px;
   margin-right: 10px;
   margin-bottom: 8px;
   border-radius: 8px;
 }
 
-.kategori-terjual,
-.produk-terlaris {
+.stok-produk {
+  width: 610px;
+  height: 336px;
+  background-color: #ffffff;
+  padding-top: 20px;
+  padding-bottom: 15px;
+  padding-right: 15px;
+  padding-left: 37px;
+  margin-top: 8px;
+  margin-right: 10px;
+  margin-bottom: 8px;
+  border-radius: 8px;
+}
+
+.kategori-terjual {
   width: 610px;
   height: 336px;
   background-color: #ffffff;
@@ -98,15 +189,108 @@ body {
   border-radius: 8px;
 }
 
-.pembelian-terbaru {
+.stok-head {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-right: 36.41px;
+}
+
+.stok-head p {
+  color: #0a5c5c;
+}
+
+.content-stok {
+  height: 80%;
+  margin-top: 11px;
+  align-content: center;
+  justify-items: center;
+}
+
+.stok-produk h1 {
   font-family: "Inter-SemiBold", Helvetica;
   font-weight: bold;
+  font-size: 15.63px;
+  padding-bottom: 11px;
+}
+
+.content-stok p {
+  font-family: "Inter-SemiBold", Helvetica;
+  font-weight: bold;
+  font-size: 14.13px;
+  color: #0a5c5c;
+}
+
+.produk-terlaris {
+  width: 610px;
+  height: 336px;
+  background-color: #ffffff;
+  padding-top: 20px;
+  padding-left: 34px;
+  margin-top: 8px;
+  margin-left: 10px;
+  margin-bottom: 8px;
+  border-radius: 8px;
+}
+
+.produk-terlaris h1 {
+  font-family: "Inter-SemiBold", Helvetica;
+  font-weight: bold;
+  font-size: 15.63px;
+  padding-bottom: 11px;
+}
+
+.content-terlaris {
+  height: 80%;
+  margin-top: 11px;
+  align-content: center;
+  justify-items: center;
+  padding-right: 34px;
+}
+
+.content-terlaris p {
+  font-family: "Inter-SemiBold", Helvetica;
+  font-weight: bold;
+  font-size: 14.13px;
+  color: #065550;
+}
+
+.pembelian-terbaru {
   width: 1239px;
   height: 276px;
   background-color: #ffffff;
+  padding-top: 20px;
+  padding-bottom: 15px;
+  padding-right: 15px;
+  padding-left: 37px;
   border-radius: 8px;
   margin-top: 8px;
   margin-bottom: 20px;
+}
+
+.head-pembelian {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-right: 36.41px;
+}
+
+.head-pembelian p {
+  color: #0a5c5c;
+}
+
+.content-pembelian {
+  height: 90%;
+  margin-top: 11px;
+  align-content: center;
+  justify-items: center;
+}
+
+.content-pembelian p {
+  font-family: "Inter-SemiBold", Helvetica;
+  font-weight: bold;
+  font-size: 14.13px;
+  color: #065550;
 }
 
 footer {

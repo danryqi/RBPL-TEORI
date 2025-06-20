@@ -3,7 +3,6 @@
 }
 
 .navbar {
-  width: 100%;
   height: 100px;
   background-color: #065550;
 }
@@ -39,41 +38,21 @@ body {
   margin: 30px 103px 30px 103px;
 }
 
-.main-head {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
-.main-head h1 {
+.cont-title {
+  color: #065550;
   font-family: "Inter-SemiBold", Helvetica;
   font-weight: 600;
   font-size: 30px;
 }
 
-.main-head p {
-  font-family: "Inter-SemiBold", Helvetica;
-  font-weight: bold;
-  color: #065550;
-}
-
-.main-content {
-  height: 100vh;
-}
-
-.card-product {
-  width: 230px;
-  height: 291px;
-}
-
-.blank {
+.content {
   height: 100vh;
   margin-top: 11px;
   align-content: center;
   justify-items: center;
 }
 
-.blank p {
+.content p {
   font-family: "Inter-SemiBold", Helvetica;
   font-weight: bold;
   font-size: 14.13px;

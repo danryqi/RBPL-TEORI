@@ -48,8 +48,8 @@
                                 </span>
                             </a>
                             <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="kontakpenting.html">Kontak Penting</a></li>
-                                <li><a class="dropdown-item" href="#">Hubungi Kami</a></li>
+                                <li><a class="dropdown-item">Hallo!</a></li>
+                                <li><a class="dropdown-item" href="#">Keluar</a></li>
                             </ul>
                         </li>
                     </ul>

@@ -29,10 +29,10 @@
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <ul class="navbar-nav ms-auto align-items-center">
                         <li class="nav-item mx-4">
-                            <a class="nav-link" href="<?= baseurl; ?>/admin/produk">Kasir</a>
+                            <a class="nav-link" href="<?= baseurl; ?>/kasir/index">Kasir</a>
                         </li>
                         <li class="nav-item mx-4">
-                            <a class="nav-link" href="<?= baseurl; ?>/admin/laporan">Laporan Harian</a>
+                            <a class="nav-link" href="<?= baseurl; ?>/kasir/laporan">Laporan Harian</a>
                         </li>
                         <li class="nav-item dropdown mx-4" id="login">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"

@@ -32,6 +32,7 @@
 
 body {
   background-color: #e6e2df;
+  overflow: hidden;
 }
 
 main {
@@ -39,6 +40,10 @@ main {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+
+.bagian-produk {
+  overflow: auto;
 }
 
 .produk {
@@ -84,7 +89,181 @@ ul {
 .kasir {
   background-color: #ffffff;
   width: 450px;
-  height: 924px;
+  height: 100vh;
+}
+
+.data {
+  padding-top: 20px;
+  padding-bottom: 15px;
+  padding-right: 20px;
+  padding-left: 20px;
+  align-content: center;
+}
+
+.nama {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  color: #666666;
+}
+
+.nama input {
+  width: 300px;
+  border-radius: 4px;
+}
+
+.nomor-meja {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: #666666;
+}
+
+.nomor-meja input {
+  width: 300px;
+  border-radius: 4px;
+}
+
+.pesanan-content {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+.pesanan-head h1 {
+  font-family: "Inter-SemiBold", Helvetica;
+  font-weight: bold;
+  font-size: 17.44px;
+  color: #065550;
+}
+
+.pesanan-list {
+  align-content: center;
+  justify-items: center;
+}
+
+.pesanan-list svg {
+  width: 45.34px;
+  height: 40px;
+  margin-top: 40px;
+  margin-bottom: 15px;
+  color: #dddddd;
+}
+
+.pesanan-list p {
+  font-family: "Inter-SemiBold", Helvetica;
+  color: #666666;
+}
+
+.pembayaran {
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+.subtotal {
+  height: 17px;
+  margin-bottom: 9px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-family: "Inter-SemiBold", Helvetica;
+  color: #666666;
+}
+
+.diskon {
+  height: 17px;
+  margin-bottom: 9px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-family: "Inter-SemiBold", Helvetica;
+  color: #666666;
+}
+
+.pajak {
+  height: 17px;
+  margin-bottom: 9px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-family: "Inter-SemiBold", Helvetica;
+  color: #666666;
+}
+
+.total {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-family: "Inter-SemiBold", Helvetica;
+  font-weight: bolder;
+  color: #000000;
+}
+
+.metode-pembayaran {
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+.metode-pembayaran h1 {
+  font-family: "Inter-SemiBold", Helvetica;
+  font-weight: bolder;
+  font-size: 15px;
+  color: #666666;
+}
+
+.button-group {
+  display: flex;
+  flex-direction: row;
+  margin-top: 11px;
+  gap: 10px;
+}
+
+.button-group input[type="radio"] {
+  display: none;
+}
+
+.button-group label {
+  height: 59px;
+  width: 130px;
+  border-radius: 4px;
+  border-style: solid;
+  border-color: #dddddd;
+  background-color: #ffffff;
+  font-family: "Inter-SemiBold", Helvetica;
+  color: #666666;
+  cursor: pointer;
+  align-content: center;
+  justify-items: center;
+}
+
+.button-group input[type="radio"]:checked + label {
+  height: 59px;
+  width: 130px;
+  border-radius: 4px;
+  border-color: #0a4d45;
+  background-color: #f0f7f6;
+  font-family: "Inter-SemiBold", Helvetica;
+  color: #0a4d45;
+  cursor: pointer;
+}
+
+.proses-pembayaran {
+  align-content: center;
+  justify-items: center;
+}
+
+.proses-pembayaran button {
+  width: 410px;
+  height: 42px;
+  margin-top: 15px;
+  border-radius: 4px;
+  border-style: none;
+  background-color: #cccccc;
+  font-family: "Inter-SemiBold", Helvetica;
+  font-weight: bold;
+  color: #ffffff;
 }
 
 footer {
