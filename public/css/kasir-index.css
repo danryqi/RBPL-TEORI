@@ -232,9 +232,9 @@ ul {
   border-color: #dddddd;
   background-color: #ffffff;
   font-family: "Inter-SemiBold", Helvetica;
+  font-size: 12px;
   color: #666666;
   cursor: pointer;
-  align-content: center;
   justify-items: center;
 }
 
@@ -245,8 +245,10 @@ ul {
   border-color: #0a4d45;
   background-color: #f0f7f6;
   font-family: "Inter-SemiBold", Helvetica;
+  font-size: 12px;
   color: #0a4d45;
   cursor: pointer;
+  justify-items: center;
 }
 
 .proses-pembayaran {

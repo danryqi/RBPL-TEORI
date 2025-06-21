@@ -92,7 +92,7 @@
                     <div class="button-group">
                         <input type="radio" class="btn-check" name="btnradio" id="tunai" autocomplete="off" checked>
                         <label for="tunai">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="20" fill="currentColor"
                                 class="bi bi-cash" viewBox="0 0 16 16">
                                 <path d="M8 10a2 2 0 1 0 0-4 2 2 0 0 0 0 4" />
                                 <path
@@ -103,7 +103,7 @@
 
                         <input type="radio" class="btn-check" name="btnradio" id="debit" autocomplete="off">
                         <label for="debit">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="20" fill="currentColor"
                                 class="bi bi-credit-card" viewBox="0 0 16 16">
                                 <path
                                     d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v1h14V4a1 1 0 0 0-1-1zm13 4H1v5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1z" />
@@ -114,7 +114,7 @@
 
                         <input type="radio" class="btn-check" name="btnradio" id="QRIS" autocomplete="off">
                         <label for="QRIS">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="20" fill="currentColor"
                                 class="bi bi-qr-code" viewBox="0 0 16 16">
                                 <path d="M2 2h2v2H2z" />
                                 <path d="M6 0v6H0V0zM5 1H1v4h4zM4 12H2v2h2z" />
