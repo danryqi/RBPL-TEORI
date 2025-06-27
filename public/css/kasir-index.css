@@ -51,9 +51,10 @@ main {
   margin-left: 30px;
 }
 
-.title {
+.Page-title {
   font-weight: 600;
   margin-bottom: 14px;
+  padding-left: 32px;
   font-weight: bolder;
   color: #065550;
 }
@@ -74,6 +75,13 @@ ul {
   padding: 8px 16px 8px 16px;
 }
 
+.menu-content {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  padding-left: 32px;
+}
+
 .menu {
   margin-top: 10px;
   margin-right: 18px;
@@ -82,8 +90,27 @@ ul {
 .menu-card {
   width: 182px;
   height: 210px;
+  padding-left: 12px;
   background-color: #ffffff;
   border-radius: 8px;
+}
+
+.menu-card h1 {
+  font-family: "Inter-SemiBold", Helvetica;
+  font-weight: bold;
+  font-size: 14px;
+  color: #004d40;
+}
+
+.menu-card p {
+  font-family: "Inter-SemiBold", Helvetica;
+  font-weight: medium;
+  font-size: 15px;
+  color: #004d40;
+}
+
+.description {
+  justify-content: space-between;
 }
 
 .kasir {

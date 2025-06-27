@@ -4,7 +4,7 @@
             <div class="cont-title">Stok Bahan Baku</div>
             <div class="cont">
                 <button type="button" data-bs-toggle="modal" data-bs-target="#modaltambah">
-                    <p>Tambah Stok</p>
+                    <p>Stok Baru</p>
                 </button>
             </div>
         </div>
@@ -53,8 +53,52 @@
             </tr>
         </table>
         <div class="content">
-            <div class="modal" id="modaltambah" aria-labelledby="modaltambahlabel" aria-hidden="true">
-                <h1>INI MODAL</h1>
+            <div class="modal fade" id="modaltambah" aria-labelledby="modaltambahlabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <form class="form-stok" action="<?= baseurl; ?>/admin/tambahstok" method="post">
+                            <div class="modal-head">
+                                <h1 class="tambahstok" id="modaltambahlabel">Stok Baru</h1>
+                            </div>
+                            <div class="modal-body">
+                                <div class="name">
+                                    <label for="nama">Nama Stok</label>
+                                    <input class="form-control" type="text" id="nama" name="nama"
+                                        placeholder="Nama stok">
+                                </div>
+                                <div class="Satuan">
+                                    <label for="satuan">Satuan Stok</label>
+                                    <input class="form-control" type="text" id="satuan" name="satuan"
+                                        placeholder="gram / Kg / ml / Liter">
+                                </div>
+                                <div class="quantity">
+                                    <label for="kuantitas">Kuantitas</label>
+                                    <input class="form-control" type="number" id="kuantitas" name="kuantitas"
+                                        placeholder="1" min="1">
+                                </div>
+                                <div class="minimum">
+                                    <label for="minimum">Minimum Stok</label>
+                                    <input class="form-control" type="number" id="minimum" name="minimum"
+                                        placeholder="1" min="1">
+                                </div>
+                                <div class="editor">
+                                    <p>Diubah Oleh :</p>
+                                    <?php foreach ($data['user'] as $user): ?>
+                                        <p><?= $user ?></p>
+                                        <label for="editor"></label>
+                                        <input class="hidden" type="number" id="editor" name="editor"
+                                            value="<?= $user['id_admin'] ?>">
+                                    <?php endforeach; ?>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="close" data-bs-dismiss="modal">Batal</button>
+                                <button type="submit" class="save">Simpan</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
             </div>
             <?php if ($data['datastok'] != null) { ?>
                 <table class="tabel-stok table-hover">

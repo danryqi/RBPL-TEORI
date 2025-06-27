@@ -32,7 +32,7 @@ class App
        //parameter
        if(!empty($url)) {
         $this->params = array_values($url);
-        var_dump($url);
+        // var_dump($url);
        }
 
        //jalankan controller dan method serta kirim parameter jika ada

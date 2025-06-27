@@ -22,8 +22,26 @@ class stok_model
         return $this->db->resultSet();
     }
 
-    public function pembaruanterbaru() {
+    public function pembaruanterbaru()
+    {
         $this->db->query("SELECT MAX(update_stok) AS terbaru FROM $this->table");
         return $this->db->single();
+    }
+
+    public function tambah($data)
+    {
+        $query = "INSERT INTO stok_bahanbaku
+                    VALUES
+                    ('', :editor, :nama, :kuantitas, :minimum, :satuan, 'Diperbarui', CURDATE())";
+        $this->db->query($query);
+        $this->db->bind('editor', $data['editor']);
+        $this->db->bind('nama', $data['nama']);
+        $this->db->bind('kuantitas', $data['kuantitas']);
+        $this->db->bind('minimum', $data['minimum']);
+        $this->db->bind('satuan', $data['satuan']);
+
+        $this->db->execute();
+
+        return $this->db->rowCount();
     }
 }

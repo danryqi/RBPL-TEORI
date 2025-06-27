@@ -3,7 +3,6 @@
 }
 
 .navbar {
-  width: 100%;
   height: 100px;
   background-color: #065550;
 }
@@ -39,93 +38,106 @@ body {
   margin: 30px 103px 30px 103px;
 }
 
-.main-head {
+.head-content {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
 
-.main-head h1 {
+.head-content h1 {
   font-family: "Inter-SemiBold", Helvetica;
-  font-weight: 600;
-  font-size: 30px;
-}
-
-.main-head p {
-  font-family: "Inter-SemiBold", Helvetica;
+  font-size: 24px;
   font-weight: bold;
-  color: #065550;
+  color: #0a4d45;
 }
 
-.main-content {
-  height: 100vh;
+.head-content p {
+  font-family: "Inter-SemiBold", Helvetica;
+  font-size: 13px;
+  margin: 0 0 0 0;
+}
+
+.head-content button {
+  height: 33px;
+  width: 92.5px;
+  border-radius: 4px;
+  border: none;
+}
+
+.aksi {
   display: flex;
   flex-direction: row;
-  gap: 27px;
+  gap: 10px;
 }
 
-.card-product {
-  display: flex;
-  flex-direction: column;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  position: relative;
-  width: 182px;
-  height: 210px;
-  padding-left: 12px;
-  background-color: #ffffff;
-  border-radius: 8px;
-  overflow: hidden;
-}
-
-.card-product::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 1;
-
-  background: linear-gradient(
-    to top,
-    rgba(30, 20, 10, 0.8) 0%,
-    rgba(0, 0, 0, 0) 60%
-  );
-}
-
-.card-product h1 {
-  font-family: "Inter-SemiBold", Helvetica;
-  font-weight: bold;
-  font-size: 14px;
-  color: #004d40;
-}
-
-.card-product h5 {
-  font-family: "Inter-SemiBold", Helvetica;
-  font-weight: medium;
-  font-size: 15px;
+.batal {
+  background-color: #dc3545;
   color: #ffffff;
 }
 
-.desk {
-  margin-top: auto;
-  z-index: 2;
+.simpan {
+  background-color: #0a4d45;
+  color: #ffffff;
 }
 
-.blank {
-  height: 100vh;
-  margin-top: 11px;
-  align-content: center;
-  justify-items: center;
+.form-content {
+  margin-top: 24px;
+  padding: 20px 20px 20px 20px;
+  border-radius: 8px;
+  background-color: #ffffff;
 }
 
-.blank p {
+.data {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.data p {
   font-family: "Inter-SemiBold", Helvetica;
+  font-size: 15.5px;
+  color: #555555;
+  margin-bottom: 10px;
+}
+
+.pilihan {
+  margin-top: 50px;
+}
+
+.pilihan h1 {
+  font-family: "Inter-SemiBold", Helvetica;
+  font-size: 18px;
   font-weight: bold;
-  font-size: 14.13px;
-  color: #065550;
+  color: #0a4d45;
+}
+
+.option {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.form-check {
+  display: flex;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-right: 25px;
+  border-radius: 4px;
+  border-color: #dddddd;
+  background-color: #f9f9f9;
+  color: #333333;
+}
+
+.form-check .form-check-input {
+  margin-left: -10px;
+  margin-right: 10px;
+}
+
+span {
+  font-family: "Inter-SemiBold", Helvetica;
+  font-size: 15px;
 }
 
 footer {

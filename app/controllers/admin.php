@@ -27,24 +27,97 @@ class admin extends Controller
         $this->view('admin/templates/footer');
     }
 
-    public function detail_produk()
+    public function detail_produk($id)
     {
         $data['judul'] = 'Detail Produk';
         $data['css'] = 'admin-detailproduk.css';
+        $data['product'] = $this->model('menu_model')->product($id);
         $this->view('admin/templates/header', $data);
         $this->view('admin/admin-detailproduk', $data);
         $this->view('admin/templates/footer');
     }
 
-    public function edit_produk()
+    public function edit_produk($id)
+    {
+        $data['judul'] = 'Detail Produk';
+        $data['css'] = 'admin-editproduk.css';
+        $data['product'] = $this->model('menu_model')->product($id);
+        $this->view('admin/templates/header', $data);
+        $this->view('admin/admin-editproduk', $data);
+        $this->view('admin/templates/footer');
+    }
+
+    public function editmenu()
     {
 
+    }
+
+    public function tambahproduk()
+    {
+        $data['judul'] = 'Tambah Produk';
+        $data['css'] = 'admin-tambahproduk.css';
+        $this->view('admin/templates/header', $data);
+        $this->view('admin/admin-tambahproduk', $data);
+        $this->view('admin/templates/footer');
+    }
+
+    public function tambahmenu()
+    {
+        $nama = $_POST['nama'];
+        $harga = $_POST['harga'];
+        $desk = $_POST['desk'];
+        $kategori = $_POST['kategori'];
+
+        $target_dir = img_path . '/';
+        $target_file = $target_dir . basename($_FILES['pic']['name']);
+        $uploadOk = 1;
+        $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
+
+        $check = getimagesize($_FILES['pic']['tmp_name']);
+        if ($check !== false) {
+            $uploadOk = 1;
+        } else {
+            echo "File bukan gambar";
+            $uploadOk = 0;
+        }
+
+        if (file_exists($target_file)) {
+            echo "File tersebut sudah ada";
+            $uploadOk = 0;
+        }
+
+        if ($_FILES['pic']['size'] > 5242880) {
+            echo "ukuran gambar terlalu besar";
+            $uploadOk = 0;
+        }
+
+        if ($imageFileType != 'jpg' && $imageFileType != 'png' && $imageFileType != 'jpeg' && $imageFileType != 'gif') {
+            echo "Hanya upload file JPG, PNG, JPEG atau GIF";
+            $uploadOk = 0;
+        }
+
+        if ($uploadOk == 0) {
+            Flasher::setFlash('Tidak', 'tersimpan', 'warning');
+        } else {
+            if (move_uploaded_file($_FILES['pic']['tmp_name'], $target_file)) {
+                Flasher::setFlash('Berhasil', 'Disimpan', 'success');
+                $menu = $this->model('menu_model');
+                $menu->tambah($nama, 'img/' . basename($_FILES['pic']['name']), $harga, $desk, $kategori);
+
+                header('Location:' . baseurl . '/admin/produk');
+                exit;
+
+            } else {
+                Flasher::setFlash('Gagal', 'disimpan', 'danger');
+            }
+        }
     }
 
     public function stok()
     {
         $data['judul'] = 'Stok Bahan Baku';
         $data['css'] = 'admin-stok.css';
+        $data['user'] = $this->model('admin_model')->user();
         $data['produk'] = $this->model('menu_model')->jumlahmenu();
         $data['stok'] = $this->model('stok_model')->stokrendah();
         $data['terbaru'] = $this->model('stok_model')->pembaruanterbaru();
@@ -52,6 +125,19 @@ class admin extends Controller
         $this->view('admin/templates/header', $data);
         $this->view('admin/admin-stok', $data);
         $this->view('admin/templates/footer');
+    }
+
+    public function tambahstok()
+    {
+        if ($this->model('stok_model')->tambah($_POST) > 0) {
+            Flasher::setFlash('Berhasil', 'Ditambahkan', 'success');
+            header('Location:' . baseurl . '/admin/stok');
+            exit;
+        } else {
+            Flasher::setFlash('Gagal', 'Ditambahkan', 'danger');
+            header('Location:' . baseurl . '/admin/stok');
+            exit;
+        }
     }
 
     public function laporan()

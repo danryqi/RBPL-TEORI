@@ -47,25 +47,33 @@ class Database
                     $type = PDO::PARAM_NULL;
                     break;
                 default:
-                $type = PDO::PARAM_STR;
+                    $type = PDO::PARAM_STR;
             }
         }
 
         $this->stmt->bindValue($param, $value, $type);
     }
 
-    public function execute() {
+    public function execute()
+    {
         $this->stmt->execute();
     }
 
-    public function resultSet() {
-        return $this->execute();
+    public function resultSet()
+    {
+        $this->execute();
         return $this->stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 
-    public function single() {
+    public function single()
+    {
         $this->execute();
         return $this->stmt->fetch(PDO::FETCH_ASSOC);
+    }
+
+    public function rowCount()
+    {
+        return $this->stmt->rowCount();
     }
 
 }

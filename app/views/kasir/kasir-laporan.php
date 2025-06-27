@@ -34,7 +34,7 @@
                     <h3><?= $produkterlaris; ?></h3>
                 <?php endforeach;
             } else { ?>
-                <h3>Belum ada produk terjual</h3>
+                <h3>-</h3>
             <?php } ?>
         </div>
         <div class="col summary-box flex-fill">
@@ -75,7 +75,7 @@
             <?php
         } else {
             ?>
-            <p>Belum ada Produk terjual</p> <?php
+            <p>Belum ada produk terjual</p> <?php
         } ?>
     </div>
 

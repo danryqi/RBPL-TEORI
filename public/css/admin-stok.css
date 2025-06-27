@@ -58,6 +58,10 @@ body {
   box-shadow: none;
 }
 
+.cont p {
+  margin: 0 0 0 0;
+}
+
 .total-produk {
   width: 280px;
   height: 100px;
@@ -157,6 +161,30 @@ body {
   font-weight: bold;
   font-size: 14.13px;
   color: #065550;
+}
+
+.modal-head {
+  padding-top: 23px;
+  align-content: center;
+  justify-items: center;
+}
+
+.tambahstok {
+  font-family: "Inter-SemiBold", Helvetica;
+  font-weight: bold;
+  font-size: 25px;
+  color: #065550;
+}
+
+.name {
+  margin-bottom: 18px;
+}
+
+.modal-body input {
+  border-radius: 10px;
+  border-color: #e6e2df;
+  box-shadow: none;
+  outline: none;
 }
 
 .tabel-head {

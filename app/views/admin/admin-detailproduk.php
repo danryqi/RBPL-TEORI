@@ -1,47 +1,41 @@
 <div class="content mt-5">
   <div class="container">
     <div class="row gap-5 align-items-center">
-      <div class="col-md-3 text-center">
-        <img src="image/IMG-20250406-WA0015.jpg" alt="Nama Produk" class="product-image-square">
-      </div>
-
-      <div class="col-md-8">
-        <span class="mb-1">
-          <span style="font-size: 30px; font-weight: bold;">Nama Produk</span>
-          <i class="bi bi-pencil-square edit-icon"></i>
-        </span>
-        <p class="text-muted fst-italic mb-2">10 Terjual</p><br>
-        <p class=" mb-4" style="color: #065550; font-size: 22px; font-weight: bold;">Rp. Harga</p>
+      <div class="image col-md-3 text-center" alt="<?= $data['product']['nama_menu'] ?>"
+        style="background-image: url('<?= img; ?>/<?= $data['product']['pic_menu'] ?>')"></div>
+      <div class="header-produk col-md-8">
+        <div class="nama">
+          <h1><?= $data['product']['nama_menu'] ?></h1>
+          <a href="<?= baseurl ?>/admin/edit_produk/<?= $data['product']['id_menu'] ?>"
+            class="text-dark text-decoration-none" aria-label="Edit Produk">
+            <i class="bi bi-pencil-square edit-icon"></i>
+          </a>
+        </div>
+        <p class=" harga">
+          Rp.<?= $data['product']['harga_menu'] ?>
+        </p>
       </div>
     </div>
-
     <hr style="margin-top: 30px;">
-
-    <div style="margin-top: 30px;">
-      <p class="section-title">Deskripsi Produk :</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet
-        odio mattis.</p>
-
-      <p class="section-title">Pilihan Penyajian :</p>
-      <div class="mb-3">
-        <span class="option-badge">Iced</span>
-        <span class="option-badge">Hot</span>
+    <div class="deskripsi" style="margin-top: 30px;">
+      <h1 class="section-title">Deskripsi Produk :</h1>
+      <p><?= $data['product']['desc_menu'] ?></p>
+      <div class="penyajian">
+        <h1>Pilihan Penyajian</h1>
+        <label for="iced">Iced</label>
+        <label for="hot">Hot</label>
       </div>
-
-      <p class="section-title">Espresso :</p>
-      <div class="mb-3">
-        <span class="option-badge">Normal Shot</span>
-        <span class="option-badge">+1 Shot</span>
-        <span class="option-badge">+2 Shot</span>
-        <span class="option-badge">+3 Shot</span>
+      <div class="Pilihan Espresso">
+        <h1>Pilihan Penyajian</h1>
+        <label for="normal">Normal Shot</label>
+        <label for="double">Double Shot</label>
+        <label for="triple">Triple Shot</label>
       </div>
-
-      <p class="section-title">Dairy :</p>
-      <div class="mb-3">
-        <span class="option-badge">Milk</span>
-        <span class="option-badge">Soy Multigrain</span>
-        <span class="option-badge">Oat Milk</span>
-        <span class="option-badge">Almond Milk</span>
+      <div class="Pilihan Dairy">
+        <h1>Pilihan Penyajian</h1>
+        <label for="milk">Milk</label>
+        <label for="oat">Oat Milk</label>
+        <label for="almond">Almond Milk</label>
       </div>
     </div>
   </div>

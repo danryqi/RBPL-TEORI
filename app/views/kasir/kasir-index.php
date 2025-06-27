@@ -1,7 +1,7 @@
 <main>
     <section class="bagian-produk">
         <div class="produk">
-            <div class="tittle">Daftar Menu</div>
+            <div class="Page-title">Daftar Menu</div>
             <div class="nav">
                 <ul>
                     <li>
@@ -22,8 +22,10 @@
                                 <div class="foto">
                                     <img src="<?= $produk['pic_menu'] ?>" alt="">
                                 </div>
-                                <h1><?= $produk['nama_menu'] ?></h1>
-                                <p><?= $produk['harga_menu'] ?></p>
+                                <div class="description">
+                                    <h1><?= $produk['nama_menu'] ?></h1>
+                                    <p>Rp.<?= $produk['harga_menu'] ?></p>
+                                </div>
                             </div>
                         </div>
                     <?php endforeach;
