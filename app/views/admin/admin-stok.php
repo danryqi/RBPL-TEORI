@@ -1,5 +1,8 @@
 <main>
     <div class="main-content">
+        <div class="flasher">
+            <?php Flasher::flash(); ?>
+        </div>
         <div class="cont-head">
             <div class="cont-title">Stok Bahan Baku</div>
             <div class="cont">
@@ -61,6 +64,7 @@
                                 <h1 class="tambahstok" id="modaltambahlabel">Stok Baru</h1>
                             </div>
                             <div class="modal-body">
+                                <input type="hidden" name="id" id="id">
                                 <div class="name">
                                     <label for="nama">Nama Stok</label>
                                     <input class="form-control" type="text" id="nama" name="nama"
@@ -83,12 +87,10 @@
                                 </div>
                                 <div class="editor">
                                     <p>Diubah Oleh :</p>
-                                    <?php foreach ($data['user'] as $user): ?>
-                                        <p><?= $user ?></p>
-                                        <label for="editor"></label>
-                                        <input class="hidden" type="number" id="editor" name="editor"
-                                            value="<?= $user['id_admin'] ?>">
-                                    <?php endforeach; ?>
+                                    <p><?= $data['user']['nama_admin'] ?></p>
+                                    <label for="editor"></label>
+                                    <input class="hidden" type="hidden" id="editor" name="editor"
+                                        value="<?= $data['user']['id_admin'] ?>">
                                 </div>
                             </div>
                             <div class="modal-footer">
@@ -104,13 +106,13 @@
                 <table class="tabel-stok table-hover">
                     <tr class="tabel-head">
                         <th>No</th>
-                        <th>Nama Stok</th>
+                        <th class="kolom-nama">Nama Stok</th>
                         <th>Satuan</th>
                         <th>Stok</th>
                         <th>Stok Min.</th>
                         <th>Status</th>
                         <th>Terakhir Diperbarui</th>
-                        <th>Aksi</th>
+                        <th class="kolom-aksi">Aksi</th>
                     </tr>
                     <?php foreach ($data['datastok'] as $datastok): ?>
                         <tr>
@@ -121,14 +123,32 @@
                             <td><?= $datastok['min_stok'] ?></td>
                             <td><?= $datastok['status_stok'] ?></td>
                             <td><?= $datastok['update_stok'] ?></td>
-                            <td></td>
+                            <td>
+                                <div class="aksi">
+                                    <a href="<?= baseurl; ?>/admin/editStok/<?= $datastok['id_stok'] ?>" class="edit_stok"
+                                        data-bs-toggle="modal" data-bs-target="#modaltambah"
+                                        data-id="<?= $datastok['id_stok'] ?>">
+                                        <button class="edit">
+                                            <p>Edit</p>
+                                        </button>
+                                    </a>
+                                    <a href="<?= baseurl; ?>/admin/hapusStok/<?= $datastok['id_stok'] ?>"
+                                        onclick="return confirm('Yakin ingin menghapus data stok?');">
+                                        <button class="hapus">
+                                            <p>Hapus</p>
+                                        </button>
+                                    </a>
+                                </div>
+                            </td>
                         </tr>
                     <?php endforeach; ?>
                 </table>
                 <?php
             } else {
                 ?>
-                <p>Belum ada stok yang ditambahkan</p>
+                <div class="stok-kosong">
+                    <p>Belum ada stok yang ditambahkan</p>
+                </div>
             <?php } ?>
         </div>
     </div>

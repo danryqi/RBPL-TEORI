@@ -31,7 +31,7 @@
             <?php if ($data['produkterlaris'] != null) {
                 foreach ($data['produkterlaris'] as $produkterlaris):
                     ?>
-                    <h3><?= $produkterlaris; ?></h3>
+                    <h3><?= $produkterlaris['nama_menu']; ?></h3>
                 <?php endforeach;
             } else { ?>
                 <h3>-</h3>

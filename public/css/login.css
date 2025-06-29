@@ -1,0 +1,114 @@
+html,
+body {
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", sans-serif;
+  background-color: #f9f9f9;
+}
+
+.bg-darkgreen {
+  background-color: #0e5c4a;
+}
+
+.btn-darkgreen {
+  background-color: #0e5c4a;
+  color: white;
+}
+
+.btn-darkgreen:hover {
+  background-color: #0c4a3b;
+}
+
+.form-control.custom-input {
+  background-color: #e6e2df;
+  border: 2px solid #0e5c4a;
+  border-radius: 6px;
+}
+
+.form-control.custom-input:focus {
+  background-color: #e6e2df;
+  border-color: #0e5c4a;
+  box-shadow: none;
+}
+
+.logo {
+  width: 350px;
+}
+
+.small-logo {
+  width: 60px;
+}
+
+.login-wrapper {
+  height: 100vh;
+  overflow: hidden;
+}
+
+a {
+  color: #0e5c4a;
+}
+
+a:hover {
+  color: #0c4a3b;
+}
+
+.custom-checkbox input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  background-color: #e6e2df;
+  border: 2px solid #0e5c4a;
+  width: 18px;
+  height: 18px;
+  border-radius: 4px;
+  position: relative;
+  margin-top: 2px;
+  cursor: pointer;
+}
+
+.custom-checkbox input[type="checkbox"]:checked {
+  background-color: #0e5c4a;
+}
+
+.custom-checkbox input[type="checkbox"]::after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 5px;
+  width: 4px;
+  height: 9px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  opacity: 0;
+  transform: rotate(45deg);
+}
+
+.custom-checkbox input[type="checkbox"]:checked::after {
+  opacity: 1;
+}
+
+.btn-google {
+  border: 2px solid #0e5c4a !important;
+  color: #0e5c4a;
+}
+
+.btn-google:hover {
+  background-color: #0e5c4a;
+  color: #fff;
+}
+
+.separator {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #0e5c4a;
+}
+
+.separator::before,
+.separator::after {
+  content: "";
+  flex: 1;
+  border-bottom: 2px solid #0e5c4a;
+  margin: 0 10px;
+}

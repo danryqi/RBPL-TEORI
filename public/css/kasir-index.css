@@ -32,7 +32,7 @@
 
 body {
   background-color: #e6e2df;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 main {
@@ -44,6 +44,12 @@ main {
 
 .bagian-produk {
   overflow: auto;
+}
+
+.flasher {
+  width: 100vh;
+  align-content: center;
+  justify-items: center;
 }
 
 .produk {
@@ -88,25 +94,53 @@ ul {
 }
 
 .menu-card {
+  display: flex;
+  flex-direction: column;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
   width: 182px;
   height: 210px;
   padding-left: 12px;
   background-color: #ffffff;
   border-radius: 8px;
+  overflow: hidden;
+}
+
+.menu-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+
+  background: linear-gradient(
+    to top,
+    rgba(30, 20, 10, 0.8) 0%,
+    rgba(0, 0, 0, 0) 60%
+  );
 }
 
 .menu-card h1 {
   font-family: "Inter-SemiBold", Helvetica;
   font-weight: bold;
   font-size: 14px;
-  color: #004d40;
+  color: #ffffff;
 }
 
 .menu-card p {
   font-family: "Inter-SemiBold", Helvetica;
   font-weight: medium;
   font-size: 15px;
-  color: #004d40;
+  color: #ffffff;
+}
+
+.desk {
+  margin-top: auto;
+  z-index: 2;
 }
 
 .description {
@@ -114,9 +148,21 @@ ul {
 }
 
 .kasir {
+  display: block;
   background-color: #ffffff;
   width: 450px;
   height: 100vh;
+}
+
+.struk-box {
+  display: none;
+  background: #f9f9f9;
+  padding: 16px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  max-width: 360px;
+  margin-top: 20px;
+  font-family: monospace;
 }
 
 .data {
@@ -182,6 +228,49 @@ ul {
 .pesanan-list p {
   font-family: "Inter-SemiBold", Helvetica;
   color: #666666;
+}
+
+.item-pesanan {
+  width: 410px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+  margin-bottom: 6px;
+}
+
+.item {
+  margin-right: 20px;
+}
+
+.item-nama {
+  font-family: "Inter-SemiBold", Helvetica;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.jumlah-item {
+  display: flex;
+  flex-direction: row;
+  gap: 25px;
+}
+
+.btn-tambah {
+  width: 25px;
+  height: 25px;
+  justify-content: center;
+  border-radius: 4px;
+  border: none;
+  background-color: #e3f2fd;
+  color: #2196f3;
+}
+.btn-kurang {
+  width: 25px;
+  height: 25px;
+  justify-content: center;
+  border-radius: 4px;
+  border: none;
+  background-color: #ffebee;
+  color: #f44336;
 }
 
 .pembayaran {
@@ -289,7 +378,26 @@ ul {
   margin-top: 15px;
   border-radius: 4px;
   border-style: none;
-  background-color: #cccccc;
+}
+
+.hapus {
+  background-color: #ffebee;
+  border-color: #dc3545;
+  font-family: "Inter-SemiBold", Helvetica;
+  font-weight: bold;
+  color: #dc3545;
+}
+
+.struk {
+  background-color: #e3f2fd;
+  border-color: #2196f3;
+  font-family: "Inter-SemiBold", Helvetica;
+  font-weight: bold;
+  color: #2196f3;
+}
+
+.bayar {
+  background-color: #065550;
   font-family: "Inter-SemiBold", Helvetica;
   font-weight: bold;
   color: #ffffff;

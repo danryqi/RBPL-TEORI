@@ -1,4 +1,5 @@
 <main>
+  <?php Flasher::login(); ?>
   <table class="main mx-auto">
     <tr class="info">
       <td>
@@ -48,10 +49,52 @@
     </tr>
     <tr>
       <td colspan="2">
-        <div class="tren-penjualan"></div>
+        <div class="tren-penjualan">
+          <div class="header-chart">
+            <h1>Tren Penjualan</h1>
+            <div class="filter-buttons">
+              <!-- <button class="filter-btn">Minggu</button> -->
+              <button class="filter-btn active">Bulan</button>
+              <!-- <button class="filter-btn">Tahun</button> -->
+            </div>
+          </div>
+          <div class="chart-area">
+            <canvas id="trenPenjualanChart"></canvas>
+          </div>
+        </div>
       </td>
       <td colspan="2">
-        <div class="kategori-terjual"></div>
+        <div class="kategori-terjual">
+          <h1>Kategori Produk terjual</h1>
+          <div class="chart-wrapper">
+            <div class="canvas-container">
+              <canvas id="kategoriChart"></canvas>
+            </div>
+            <div id="chartLegend" class="chart-legend">
+              <?php if (!empty($data['kategori_data_untuk_legend'])): ?>
+                <?php
+                $totalSemuaKategori = array_sum(array_column($data['kategori_data_untuk_legend'], 'total_terjual'));
+                $totalSemuaKategori = ($totalSemuaKategori == 0) ? 1 : $totalSemuaKategori;
+                $warna = ['#0F5B54', '#36A2EB', '#FFCE56', '#FF6384', '#4BC0C0'];
+                $i = 0;
+                ?>
+                <ul>
+                  <?php foreach ($data['kategori_data_untuk_legend'] as $item): ?>
+                    <?php
+                    $persen = round(($item['total_terjual'] / $totalSemuaKategori) * 100);
+                    $warnaSaatIni = $warna[$i % count($warna)];
+                    ?>
+                    <li class="legend-item">
+                      <span class="legend-color-box" style="background-color: <?= $warnaSaatIni; ?>"></span>
+                      <?= htmlspecialchars($item['kategori_menu']); ?>: <?= $persen; ?>%
+                    </li>
+                    <?php $i++; ?>
+                  <?php endforeach; ?>
+                </ul>
+              <?php endif; ?>
+            </div>
+          </div>
+        </div>
       </td>
     </tr>
     <tr>
@@ -96,28 +139,18 @@
           <h1>Produk Terlaris</h1>
           <div class="content-terlaris">
             <?php if ($data['terlaris'] != null) { ?>
-              <table class="table">
-                <thead>
-                  <tr>
-                    <th scope="col">Produk</th>
-                    <th scope="col">Sisa Stok</th>
-                    <th scope="col">Status</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <?php foreach ($data['terlaris'] as $terlaris): ?>
-                    <tr>
-                      <td><?= $terlaris['nama_stok']; ?></td>
-                      <td><?= $terlaris['jumlah_stok']; ?></td>
-                      <td><?= $terlaris['status_stok']; ?></td>
-                    </tr>
-                  <?php endforeach;
-                  ?>
-                </tbody>
-              </table> <?php
+              <?php foreach ($data['terlaris'] as $terlaris): ?>
+                <div class="item-terlaris">
+                  <span class="product-name"><?= htmlspecialchars($terlaris['nama_menu']); ?></span>
+                  <div class="progress-bar-container">
+                    <div class="progress-bar-fill" style="width: <?= $terlaris['lebar_persen']; ?>%;"></div>
+                  </div>
+                  <span class="product-count"><?= $terlaris['jumlah']; ?></span>
+                </div>
+              <?php endforeach;
             } else {
               ?>
-              <p>Belum ada Produk yang ditambahkan</p> <?php
+              <p>Belum ada Produk yang terjual</p> <?php
             } ?>
           </div>
         </div>
@@ -152,12 +185,12 @@
                       <td><?= $penjualan['subtotal']; ?></td>
                     </tr>
                   <?php endforeach; ?>
-                  </tbody>
-            </table>
-            <?php
+                </tbody>
+              </table>
+              <?php
             } else {
               ?>
-                  <p>Belum ada Produk terjual</p> <?php
+              <p>Belum ada Produk terjual Hari ini</p> <?php
             } ?>
           </div>
         </div>
@@ -165,4 +198,96 @@
     </tr>
   </table>
 </main>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    // Ambil data dari PHP
+    const trenLabels = <?= $data['tren_labels_json'] ?? '[]'; ?>;
+    const trenData = <?= $data['tren_data_json'] ?? '[]'; ?>;
+
+    // Hanya gambar jika ada data
+    if (trenLabels.length > 0) {
+      const ctx = document.getElementById('trenPenjualanChart');
+
+      const data = {
+        labels: trenLabels,
+        datasets: [{
+          label: 'Penjualan',
+          data: trenData,
+          fill: true, // Membuat area di bawah garis terisi warna
+          backgroundColor: 'rgba(15, 91, 84, 0.1)', // Warna area (sangat transparan)
+          borderColor: '#0F5B54', // Warna garis utama
+          tension: 0.4, // Membuat garis melengkung (0=lurus, 1=sangat melengkung)
+          pointBackgroundColor: '#0F5B54', // Warna titik
+          pointBorderColor: '#fff', // Border putih di sekitar titik
+          pointHoverRadius: 7, // Ukuran titik saat di-hover
+          pointRadius: 5 // Ukuran titik normal
+        }]
+      };
+
+      const config = {
+        type: 'line', // Tipe chart adalah 'line'
+        data: data,
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          scales: {
+            y: {
+              beginAtZero: true // Sumbu Y dimulai dari 0
+            }
+          },
+          plugins: {
+            legend: {
+              display: false // Sembunyikan legend karena hanya ada 1 dataset
+            }
+          }
+        }
+      };
+
+      new Chart(ctx, config);
+    }
+  });
+</script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+
+    // --- SELURUH KODE LAMA ANDA SEKARANG ADA DI DALAM SINI ---
+
+    // Ambil data dari PHP
+    const kategoriLabels = <?= $data['kategori_labels_json'] ?? '[]'; ?>;
+    const kategoriTotals = <?= $data['kategori_totals_json'] ?? '[]'; ?>;
+
+    // Hanya gambar chart jika ada data
+    if (kategoriLabels.length > 0) {
+      const ctx = document.getElementById('kategoriChart');
+
+      const data = {
+        labels: kategoriLabels,
+        datasets: [{
+          data: kategoriTotals,
+          backgroundColor: ['#0F5B54', '#36A2EB', '#FFCE56', '#FF6384', '#4BC0C0'],
+          hoverOffset: 4,
+          borderWidth: 0,
+        }]
+      };
+
+      const config = {
+        type: 'doughnut',
+        data: data,
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          cutout: '70%',
+          plugins: {
+            legend: { display: false }
+          }
+        }
+      };
+
+      // Baris ini sekarang aman untuk dijalankan
+      new Chart(ctx, config);
+    }
+
+  });
+</script>
+
 </body>

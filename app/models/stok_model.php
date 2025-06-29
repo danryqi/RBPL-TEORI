@@ -44,4 +44,36 @@ class stok_model
 
         return $this->db->rowCount();
     }
+
+    public function ambilstok($id)
+    {
+        $this->db->query("SELECT * FROM $this->table WHERE id_stok = :id");
+        $this->db->bind('id', $id);
+        return $this->db->single();
+    }
+
+    public function edit($data)
+    {
+        $query = "UPDATE stok_bahanbaku SET nama_stok = :nama, jumlah_stok = :kuantitas, min_stok = :minimum, satuan_stok = :satuan WHERE id_stok = :id";
+        $this->db->query($query);
+        $this->db->bind('nama', $data['nama']);
+        $this->db->bind('kuantitas', $data['kuantitas']);
+        $this->db->bind('minimum', $data['minimum']);
+        $this->db->bind('satuan', $data['satuan']);
+        $this->db->bind('id', $data['id']);
+
+        $this->db->execute();
+
+        return $this->db->rowCount();
+    }
+
+    public function hapus($id)
+    {
+        $query = "DELETE FROM stok_bahanbaku WHERE id_stok = :id";
+        $this->db->query($query);
+        $this->db->bind('id', $id);
+
+        $this->db->execute();
+        return $this->db->rowCount();
+    }
 }

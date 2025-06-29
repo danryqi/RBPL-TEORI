@@ -10,31 +10,52 @@
         </div>
         <div class="sorting">
             <form method="GET" action="<?php baseurl; ?>/admin/laporan">
-                <?php foreach ($data['pemasukan_bulanan'] as $pemasukan): ?>
-                    <div class="form-sorting">
-                        <div class="tanggal-mulai">
-                            <h1>Tanggal Mulai</h1>
-                            <label for="tanggalmulai">
-                                <input type="date" id="tanggalmulai" value="<?= ($pemasukan['tanggalmulai']); ?>">
-                            </label>
-                        </div>
-                        <div class="tanggal-akhir">
-                            <h1>Tanggal Akhir</h1>
-                            <label for="tanggalakhir">
-                                <input type="date" id="tanggalakhir" value="<?= ($pemasukan['tanggalakhir']); ?>">
-                            </label>
-                        </div>
-                        <div class="pilihan-kategori">
-                            <h1>Kategori Produk</h1>
-                            <label for="kategori">
-                                <select name="kategori" id="kategori">
-                                    <option value=""></option>
-                                </select>
-                            </label>
-                        </div>
-                        <div class="submit"></div>
+                <div class="form-sorting">
+                    <!-- Bagian Tanggal Mulai -->
+                    <div class="tanggal-mulai">
+                        <h1>Tanggal Mulai</h1>
+                        <label for="tanggalmulai">
+                            <!--
+                              Nilai 'value' diisi dari data filter yang dikirim Controller,
+                              bukan dari loop. Gunakan '??' untuk nilai default jika data tidak ada.
+                            -->
+                            <input type="date" id="tanggalmulai" name="tanggalmulai"
+                                value="<?= $data['filter']['tanggal_mulai'] ?? '' ?>">
+                        </label>
                     </div>
-                <?php endforeach; ?>
+
+                    <!-- Bagian Tanggal Akhir -->
+                    <div class="tanggal-akhir">
+                        <h1>Tanggal Akhir</h1>
+                        <label for="tanggalakhir">
+                            <input type="date" id="tanggalakhir" name="tanggalakhir"
+                                value="<?= $data['filter']['tanggal_akhir'] ?? '' ?>">
+                        </label>
+                    </div>
+
+                    <!-- Bagian Pilihan Kategori -->
+                    <div class="pilihan-kategori">
+                        <h1>Kategori Produk</h1>
+                        <label for="kategori">
+                            <select name="kategori" id="kategori">
+                                <option value="">Semua Kategori</option>
+                                <!-- Anda bisa mengisi pilihan kategori di sini dengan loop terpisah jika perlu -->
+                                <?php foreach ($data['daftar_kategori'] ?? [] as $kategori): ?>
+                                    <option value="<?= $kategori['id_kategori'] ?>"><?= $kategori['nama_kategori'] ?>
+                                    </option>
+                                <?php endforeach; ?>
+                            </select>
+                        </label>
+                    </div>
+
+                    <!-- 
+                      PERBAIKAN: Tombol untuk mengirim form filter
+                      Letakkan di dalam div 'submit' Anda.
+                    -->
+                    <div class="submit">
+                        <button type="submit">Terapkan</button>
+                    </div>
+                </div>
             </form>
         </div>
         <div class="transaction-rate">
@@ -57,7 +78,7 @@
             <h1>Penjualan Per Produk</h1>
             <div class="penjualan-content">
                 <?php if ($data['penjualan_bulanan'] != null) { ?>
-                    <table>
+                    <table class="table table-hover">
                         <tr>
                             <th>No</th>
                             <th>Nama Produk</th>
@@ -82,7 +103,7 @@
             <h1>Penjualan Harian</h1>
             <div class="sell-content">
                 <?php if ($data['penjualan'] != null) { ?>
-                    <table>
+                    <table class="table table-hover">
                         <tr>
                             <th>Tanggal</th>
                             <th>Total Transaksi</th>

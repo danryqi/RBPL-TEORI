@@ -4,11 +4,6 @@
             <div class="head-content">
                 <h1>Ubah Produk</h1>
                 <div class="aksi">
-                    <a href="<?= baseurl; ?>/admin/hapus">
-                        <button class="hapus">
-                            <p>Hapus</p>
-                        </button>
-                    </a>
                     <a href="<?= baseurl; ?>/admin/produk">
                         <button class="batal">
                             <p>Batal</p>
@@ -22,6 +17,7 @@
             <div class="form-content">
                 <div class="data">
                     <input type="hidden" name="id" id="id" value="<?= $data['product']['id_menu'] ?>">
+                    <input type="hidden" name="gambarlama" value="<?= $data['product']['pic_menu'] ?>">
                     <div class="name">
                         <p>Nama Produk</p>
                         <input class="form-control" type="text" name="nama" id="nama"
@@ -46,9 +42,8 @@
                     </div>
                     <div class="kategori">
                         <select class="form-select" name="kategori" id="kategori">
-                            <option selected><?= $data['product']['kategori_menu'] ?></option>
-                            <option value="Makanan">Makanan</option>
-                            <option value="Makanan">Minuman</option>
+                            <option value="Makanan" <?= ($data['product']['kategori_menu'] == 'Makanan') ? 'selected' : '' ?>>Makanan</option>
+                            <option value="Minuman" <?= ($data['product']['kategori_menu'] == 'Minuman') ? 'selected' : '' ?>>Minuman</option>
                         </select>
                     </div>
                 </div>

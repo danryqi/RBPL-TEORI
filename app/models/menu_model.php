@@ -41,8 +41,26 @@ class menu_model
         $this->db->execute();
     }
 
-    public function editproduk()
+    public function editproduk($id, $nama, $_path, $harga, $desk, $kategori)
     {
+        $this->db->query("UPDATE $this->table SET nama_menu = :nama, kategori_menu = :kategori, harga_menu = :harga, desc_menu = :desk, pic_menu = :_path WHERE id_menu = :id");
+        $this->db->bind('id', $id);
+        $this->db->bind('nama', $nama);
+        $this->db->bind('kategori', $kategori);
+        $this->db->bind('harga', $harga);
+        $this->db->bind('desk', $desk);
+        $this->db->bind('_path', $_path);
 
+        $this->db->execute();
+    }
+
+    public function hapusmenu($id)
+    {
+        $query = "DELETE FROM menu WHERE id_menu = :id";
+        $this->db->query($query);
+        $this->db->bind('id', $id);
+
+        $this->db->execute();
+        return $this->db->rowCount();
     }
 }

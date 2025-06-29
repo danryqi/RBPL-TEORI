@@ -1,9 +1,9 @@
 <div class="content mt-5">
   <div class="container">
-    <div class="row gap-5 align-items-center">
-      <div class="image col-md-3 text-center" alt="<?= $data['product']['nama_menu'] ?>"
+    <div class="product gap-5">
+      <div class="image col-3 text-center" alt="<?= $data['product']['nama_menu'] ?>"
         style="background-image: url('<?= img; ?>/<?= $data['product']['pic_menu'] ?>')"></div>
-      <div class="header-produk col-md-8">
+      <div class="header-produk">
         <div class="nama">
           <h1><?= $data['product']['nama_menu'] ?></h1>
           <a href="<?= baseurl ?>/admin/edit_produk/<?= $data['product']['id_menu'] ?>"
@@ -15,6 +15,12 @@
           Rp.<?= $data['product']['harga_menu'] ?>
         </p>
       </div>
+      <a href="<?= baseurl; ?>/admin/hapusproduk/<?= $data['product']['id_menu'] ?>" class="ms-auto"
+        onclick="return confirm('Yakin ingin menghapus data produk?');">
+        <button class="hapus">
+          <p>Hapus</p>
+        </button>
+      </a>
     </div>
     <hr style="margin-top: 30px;">
     <div class="deskripsi" style="margin-top: 30px;">

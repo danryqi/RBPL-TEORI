@@ -35,16 +35,29 @@
                             <a class="nav-link" href="<?= baseurl; ?>/kasir/laporan">Laporan Harian</a>
                         </li>
                         <li class="nav-item dropdown mx-4" id="login">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            <button class="nav-link dropdown-toggle" id="navbarDropdown" role="button"
                                 data-bs-toggle="dropdown" aria-expanded="false">
                                 <span class="icon-circle">
                                     <i class="bi bi-person-fill login-icon"></i>
                                 </span>
-                            </a>
+                            </button>
                             <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="kontakpenting.html">Kontak Penting</a></li>
-                                <li><a class="dropdown-item" href="#">Hubungi Kami</a></li>
+                                <li>
+                                    <a class="dropdown-item disabled" href="#">
+                                        Hallo, <span class="username-display"><?= $data['nama']; ?></span>!
+                                    </a>
+                                </li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="<?= baseurl; ?>/LoginAuth/logout">
+                                        <i class="bi bi-box-arrow-right me-2"></i>
+                                        Keluar
+                                    </a>
+                                </li>
                             </ul>
+
                         </li>
                     </ul>
                 </div>
